@@ -9,6 +9,7 @@ import tachlit from "../../assets/images/tachlit.png";
 const images = { harel: harel, more, kesem, psagot, tachlit };
 const Trades = () => {
   const [trades, setTrades] = useState(TRADES);
+  const [selectedTrades, setSelectedTrades] = useState([]);
   const [selectedTradeIndex, setSelectedTradeIndex] = useState(0);
 
   const images = [psagot, harel, more, tachlit, kesem];
@@ -19,9 +20,21 @@ const Trades = () => {
   const selectStock = (event) => {
     const stockName = event.target.value;
     const tradeIndex = trades.findIndex((item) => item.stock == stockName);
-    console.log(tradeIndex);
     setSelectedTradeIndex(tradeIndex);
+    const filteredTrades = trades.filter((item) => item.stock == stockName);
+    console.log(filteredTrades);
+    setSelectedTrades(filteredTrades);
   };
+
+  const profitPercent = (
+    <ul>
+      {selectedTrades.map((trade) => (
+        <div key={trade.tradeId}>
+          {(100 * (trade.sell / trade.buy - 1)).toFixed(2)}%
+        </div>
+      ))}
+    </ul>
+  );
 
   return (
     <div>
@@ -35,9 +48,9 @@ const Trades = () => {
           ;
         </select>
       </div>
-      <div>
-        <img src={images[selectedTradeIndex]} style={{ width: "50%" }} />
-      </div>
+      <img src={images[selectedTradeIndex]} style={{ width: "60%" }} />
+
+      <div className="profit">Profit: {profitPercent}</div>
     </div>
   );
 };
