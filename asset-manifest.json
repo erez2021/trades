@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/trades/static/css/main.0fb07bb3.css",
-    "main.js": "/trades/static/js/main.ef87bd8d.js",
+    "main.css": "/trades/static/css/main.4c5c6c6b.css",
+    "main.js": "/trades/static/js/main.355fcfd0.js",
     "static/js/787.1b6e7aca.chunk.js": "/trades/static/js/787.1b6e7aca.chunk.js",
     "static/media/more.png": "/trades/static/media/more.32b540b6c2571d05bb55.png",
     "static/media/tachlit.png": "/trades/static/media/tachlit.c246aad171cc25360983.png",
     "static/media/kesem.png": "/trades/static/media/kesem.9a06f1d56a1060ece5ff.png",
     "static/media/psagot.png": "/trades/static/media/psagot.c04dec19153c3a5d1314.png",
+    "static/media/bankim.png": "/trades/static/media/bankim.10946f347d2d956e5b7a.png",
+    "static/media/telAviv.png": "/trades/static/media/telAviv.3beb54b52cd0dd55f726.png",
     "static/media/harel.png": "/trades/static/media/harel.1e1a3cd01d79ba3ba000.png",
     "index.html": "/trades/index.html",
-    "main.0fb07bb3.css.map": "/trades/static/css/main.0fb07bb3.css.map",
-    "main.ef87bd8d.js.map": "/trades/static/js/main.ef87bd8d.js.map",
+    "main.4c5c6c6b.css.map": "/trades/static/css/main.4c5c6c6b.css.map",
+    "main.355fcfd0.js.map": "/trades/static/js/main.355fcfd0.js.map",
     "787.1b6e7aca.chunk.js.map": "/trades/static/js/787.1b6e7aca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fb07bb3.css",
-    "static/js/main.ef87bd8d.js"
+    "static/css/main.4c5c6c6b.css",
+    "static/js/main.355fcfd0.js"
   ]
 }
