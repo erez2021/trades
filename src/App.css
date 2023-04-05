@@ -36,4 +36,12 @@ span:hover {
   img {
     width: 100% !important;
   }
+  .full-width {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .span {
+    display: inline-block;
+  }
 }

@@ -10,16 +10,22 @@ const Header = (props) => {
     <div className="flex header">
       <div className="full-width">
         <span
-          className={selectedPage == "trades" ? "selected" : ""}
+          className={selectedPage == "trades" ? "selected" : "" + "span"}
           onClick={() => selectPage("trades")}
         >
-          Trades
+          העסקאות שלי
         </span>
         <span
-          className={selectedPage == "about" ? "selected" : ""}
+          className={selectedPage == "index" ? "selected" : "" + "span"}
+          onClick={() => selectPage("index")}
+        >
+          ביצועי מדדים
+        </span>
+        <span
+          className={selectedPage == "about" ? "selected" : "" + "span"}
           onClick={() => selectPage("about")}
         >
-          About
+          אודות
         </span>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import "./trades.css";
 import { useState } from "react";
 import { TRADES } from "../../services/tradeService";
 import harel from "../../assets/images/harel.png";
@@ -6,10 +7,9 @@ import kesem from "../../assets/images/kesem.png";
 import psagot from "../../assets/images/psagot.png";
 import tachlit from "../../assets/images/tachlit.png";
 
-const images = { harel: harel, more, kesem, psagot, tachlit };
 const Trades = () => {
   const [trades, setTrades] = useState(TRADES);
-  const [selectedTrades, setSelectedTrades] = useState([]);
+  const [selectedTrades, setSelectedTrades] = useState([TRADES[0]]);
   const [selectedTradeIndex, setSelectedTradeIndex] = useState(0);
 
   const images = [psagot, harel, more, tachlit, kesem];
@@ -22,22 +22,22 @@ const Trades = () => {
     const tradeIndex = trades.findIndex((item) => item.stock == stockName);
     setSelectedTradeIndex(tradeIndex);
     const filteredTrades = trades.filter((item) => item.stock == stockName);
-    console.log(filteredTrades);
     setSelectedTrades(filteredTrades);
   };
 
   const profitPercent = (
-    <ul>
+    <span style={{ marginRight: "unset" }}>
       {selectedTrades.map((trade) => (
-        <div key={trade.tradeId}>
+        <span key={trade.tradeId}>
           {(100 * (trade.sell / trade.buy - 1)).toFixed(2)}%
-        </div>
+        </span>
       ))}
-    </ul>
+    </span>
   );
 
   return (
-    <div>
+    <div className="trades">
+      <p>:עסקאות שביצעתי בחצי שנה האחרונה</p>
       <div style={{ marginBottom: "40px" }}>
         <select onChange={selectStock} style={{ padding: "4px" }}>
           {tradesNamesToDisplay.map((name) => (
@@ -48,9 +48,9 @@ const Trades = () => {
           ;
         </select>
       </div>
-      <img src={images[selectedTradeIndex]} style={{ width: "60%" }} />
+      <img src={images[selectedTradeIndex]} style={{ width: "50%" }} />
 
-      <div className="profit">Profit: {profitPercent}</div>
+      <div className="profit"> תשואה:{profitPercent}</div>
     </div>
   );
 };

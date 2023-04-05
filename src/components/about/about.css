@@ -1,3 +1,10 @@
 .about {
-  color: yellow;
+  font-size: 18px;
+  color: white;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
 }
