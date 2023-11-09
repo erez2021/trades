@@ -1,0 +1,23 @@
+{
+  "title": "Stocks Calculator",
+  "currency": "Coin",
+  "lang": "Language",
+  "coin": {
+    "shekel": "ILS",
+    "dollar": "USD"
+  },
+  "language": {
+    "he": "HE",
+    "en": "EN"
+  },
+  "investment": "Investment amount",
+  "profitTarget": "Profit target",
+  "leverage": "Leverage",
+  "commission": "Commission by percentages",
+  "grossProfit": "Gross profit",
+  "tax": "Tax",
+  "totalCommission": "Total commission",
+  "net profit": "Net profit",
+  "calculate": "Calculate",
+  "clear": "clear"
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SECTIONS } from "../../services/navigationService";
 const Header = (props) => {
   const [selectedPage, setSelectedPage] = useState("trades");
   const selectPage = (page) => {
@@ -9,24 +10,17 @@ const Header = (props) => {
   return (
     <div className="flex header">
       <div className="full-width">
-        <span
-          className={selectedPage == "trades" ? "selected" : "" + "span"}
-          onClick={() => selectPage("trades")}
-        >
-          העסקאות שלי
-        </span>
-        <span
-          className={selectedPage == "index" ? "selected" : "" + "span"}
-          onClick={() => selectPage("index")}
-        >
-          ביצועי מדדים
-        </span>
-        <span
-          className={selectedPage == "about" ? "selected" : "" + "span"}
-          onClick={() => selectPage("about")}
-        >
-          אודות
-        </span>
+        {SECTIONS.map((item) => (
+          <span
+            key={item.title}
+            className={
+              selectedPage == item.selectedPage ? "selected" : "" + "span"
+            }
+            onClick={() => selectPage(item.selectedPage)}
+          >
+            {item.title}
+          </span>
+        ))}
       </div>
     </div>
   );

@@ -1,3 +1,7 @@
+body {
+  height: 100%;
+  background-color: black;
+}
 .App {
   text-align: center;
 }
@@ -7,6 +11,9 @@
 }
 .flex {
   display: flex;
+}
+.en-direction {
+  direction: rtl;
 }
 span {
   text-decoration: none;
@@ -31,6 +38,28 @@ span:hover {
   font-size: 24px;
   margin-top: 20px;
 }
+.app-calculator {
+  position: relative;
+}
+.top-inputs {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  margin-bottom: 40px;
+}
+.currency-input {
+  margin: 20px;
+  width: 10% !important;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+label {
+  font-size: 15px;
+}
 
 @media only screen and (max-width: 600px) {
   img {
@@ -43,5 +72,10 @@ span:hover {
   }
   .span {
     display: inline-block;
+  }
+  .currency-input {
+    width: unset !important;
+    margin: unset;
+    margin-left: 15px;
   }
 }

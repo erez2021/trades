@@ -23,7 +23,10 @@ const Index = () => {
     <div className="index">
       <p>:ביצועי מדדים מובילים בתקופה המקבילה</p>
       <div style={{ marginBottom: "40px" }}>
-        <select onChange={selectStock} style={{ padding: "4px" }}>
+        <select
+          onChange={selectStock}
+          style={{ padding: "6px", fontSize: "18px" }}
+        >
           {indexesNamesToDisplay.map((name) => (
             <option key={name} value={name}>
               {name}

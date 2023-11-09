@@ -1,0 +1,23 @@
+{
+  "title": "מחשבון מניות",
+  "currency": "מטבע",
+  "lang": "שפה",
+  "coin": {
+    "shekel": "שקל",
+    "dollar": "דולר"
+  },
+  "language": {
+    "he": "עברית",
+    "en": "אנגלית"
+  },
+  "investment": "סכום השקעה",
+  "profitTarget": "יעד רווח",
+  "leverage": "מינוף",
+  "commission": "עמלה באחוזים",
+  "grossProfit": "רווח ברוטו",
+  "tax": "מס",
+  "totalCommission": "עמלה כוללת",
+  "net profit": "רווח נטו",
+  "calculate": "חשב",
+  "clear": "נקה"
+}
